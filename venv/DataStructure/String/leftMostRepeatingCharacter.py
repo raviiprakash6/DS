@@ -1,15 +1,20 @@
-def leftMostRepeatingCharacter(s1):
-    """THis function will return the left most repeating character present in String
+def leftMostRepeatingCharacter(str):
+    """THis function will return the index of left most repeating character present in String
     """
-    char=[0]*256
-    for i in s1:
-        if(char[ord(i)]>0):
-            return i
+    char=[-1]*256
+    min_index= float('inf')
+    for i in range(0,len(str)):
+        if char[ord(str[i])] == -1:
+            char[ord(str[i])]=i
         else:
-            char[ord(i)]+=1
-    return -1
+            min_index=min(min_index,char[ord(str[i])])
 
-s1="=<>a<="
+    if min_index == float('inf'):
+        return -1
+    return min_index
+
+
+s1="=<>a"
 print(leftMostRepeatingCharacter(s1))
 
 

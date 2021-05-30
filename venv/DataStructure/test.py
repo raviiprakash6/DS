@@ -1,36 +1,33 @@
-class Node:
-    def __init__(self,data):
-        self.data=data
-        self.left=None
-        self.right=None
+def patternSearching(string,pattern):
+  "This is naive method of Pattern matching"
+  s=string
+  p=pattern
+  N=len(string)
+  n=len(pattern)
+  t=[]
+  index=0
+  for i in range(N):
+    if(s[i]==p[i%n] and i%n !=0):
+      t.append(s[i])
 
-def childrenSumProperty(root):
-    if root.left and root.right:
-        if root.data!=root.left.data+root.right.data:
-            return "NO"
-        else:
-            childrenSumProperty(root.left)
-            childrenSumProperty(root.right)
-    elif root.left:
-        if root.data!=root.left.data:
-            return "NO"
-        else:
-            childrenSumProperty(root.left)
-    elif root.right:
-        if root.data!=root.right.data:
-            return "NO"
-        else:
-            childrenSumProperty(root.right)
-
-
+    elif("".join(t)==p):
+      print(index)
+      t = []
+      if(s[i]==p[i%n]):
+        t.append(s[i])
+        index=i
+    else:
+      t=[]
+      if (s[i] == p[i % n]):
+        t.append(s[i])
+        index=i
 
 
-root=Node(20)
-root.left=Node(9)
-root.right=Node(11)
-root.right.right=Node(6)
-root.right.left=Node(5)
-root.left.left=Node(4)
-root.left.right=Node(15)
-print(childrenSumProperty(root))
+patternSearching('abacaba','aba')
+
+
+
+patternSearching("abacabacdseabab","aba")
+
+
 

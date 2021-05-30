@@ -17,6 +17,6 @@ def longestSubArrayWithGivenSum(arr,sum):
     return maxlength
 
 
-arr=[3,1,0,1,8,2,3,6]
+arr=[8,3,1,0,0,1,8,2,3,6]
 print(longestSubArrayWithGivenSum(arr,5))
     

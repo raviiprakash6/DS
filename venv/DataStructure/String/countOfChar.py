@@ -10,6 +10,6 @@ def countOfChar(str):
 
 
 str="geekforgeek"
-print(countOfChar(str))
+countOfChar(str)
 
 
