@@ -39,3 +39,5 @@ for (e, v) in edges:
     graph.add_node(e, v)
 graph.print_graph()
 graph.print_BFS(5)
+
+#complexity is O(V+E)
