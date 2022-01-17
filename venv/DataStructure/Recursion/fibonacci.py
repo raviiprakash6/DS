@@ -25,3 +25,30 @@ def fibonacci(n):
 
 print(fibonacci(4))
 
+
+
+#--------------------------
+def fib(n):
+    a=0
+    b=1
+    c=0
+    for i in range(n):
+        if i==0:
+            c=a
+        elif i==1:
+            c=b
+        else:
+            c=a+b
+            a=b
+            b=c
+    return c
+
+
+#---------------------------
+def fib(n, a=0, b=1):
+    if n == 0:
+        return a
+    elif n == 1:
+        return b
+    return fib(n-1, b, a + b)
+
