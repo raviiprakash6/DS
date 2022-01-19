@@ -7,3 +7,4 @@ def nthGPterm(n, firstTerm, commonRatio):
 
 print(nthGPterm(4,2,2))
 
+
