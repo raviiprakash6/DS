@@ -29,7 +29,7 @@ def maxEvenOdd(arr, c=1):
                 c = i + 1
                 break
     else:
-        # When number of element in list is 1 function will diectly come out from this return
+        # When number of element in list1 is 1 function will diectly come out from this return
         return 1
     return max(count, maxEvenOdd(arr, c))
 
@@ -50,7 +50,7 @@ def maxEvenOdd(arr,c=1):
                 c=i+1
                 break;
     else:
-        #When number of element in list is 1 function will diectly come out from this return
+        #When number of element in list1 is 1 function will diectly come out from this return
         return 1
     return max(b,maxEvenOdd(arr,c))
 
