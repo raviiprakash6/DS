@@ -23,7 +23,7 @@ def stockSell(arr, c=1):
 
 #-------------------------------------------------------------------------------------------------------#
 
-def stockSell(arr, c=1):
+def stockSell_1(arr, c=1):
     buy = 0
     sell = 0
     profit = 0
@@ -34,3 +34,8 @@ def stockSell(arr, c=1):
             sell = arr[i]
             profit += (sell - buy)
     return profit
+
+
+arr=[1,5,3,1,2,8]
+print(stockSell(arr, c=1))
+print(stockSell_1(arr, c=1))
