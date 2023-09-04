@@ -9,7 +9,7 @@ def levelOrderTraversal(root):
     arr = [root]
     while len(arr) > 0:
         root = arr.pop(0)
-        print(root.node)
+        print(root.node, end=" ")
         if root.left:
             arr.append(root.left)
         if root.right:
